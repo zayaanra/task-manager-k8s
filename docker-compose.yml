@@ -1,0 +1,16 @@
+services:
+  todo-app:
+    build: .
+    container_name: todo-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - FLASK_ENV=development
+      - MONGO_HOST=db
+    
+  db:
+    image: mongo:latest    # Use official MongoDB image from Docker Hub
+    volumes:
+      - ./data/db:/data/db
