@@ -1,2 +1,2 @@
-# todo-k8s
-cloud computing hw2
+# task-manager-k8s
+An existing task management service that has been containerized through Kubernetes.
